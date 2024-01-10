@@ -11,8 +11,6 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
 const TEST_STRING = `Font-Minify-${version} 你说，儿豁中国人不骗中国人`
-const fontPath = join(__dirname, '../fonts/SmileySans-Oblique.ttf')
-const buffer = fs.readFileSync(fontPath)
 
 function getHash(buffer: Buffer) {
   return crypto.createHash('sha256')
@@ -43,6 +41,9 @@ export function displaySize(byte: number) {
 }
 
 describe('ttf', () => {
+  const fontPath = join(__dirname, '../fonts/SmileySans-Oblique.ttf')
+  const buffer = fs.readFileSync(fontPath)
+
   it('ttf', async () => {
     const ext = 'ttf'
     const newBuffer = await minify({
@@ -158,9 +159,9 @@ describe('ttf', () => {
 
 describe('otf', () => {
   const fontPath = join(__dirname, '../fonts/SmileySans-Oblique.otf')
+  const buffer = fs.readFileSync(fontPath)
 
   it('otf 2 ttf', async () => {
-    const buffer = fs.readFileSync(fontPath)
     const ext = 'otf'
     const newBuffer = await minify({
       buffer,
@@ -189,7 +190,6 @@ describe('otf', () => {
   })
 
   it('otf 2 woff', async () => {
-    const buffer = fs.readFileSync(fontPath)
     const ext = 'otf'
     const newBuffer = await minify({
       buffer,
@@ -218,7 +218,6 @@ describe('otf', () => {
   })
 
   it('otf 2 woff2', async () => {
-    const buffer = fs.readFileSync(fontPath)
     const ext = 'otf'
     const newBuffer = await minify({
       buffer,
@@ -247,7 +246,6 @@ describe('otf', () => {
   })
 
   it('otf 2 eot', async () => {
-    const buffer = fs.readFileSync(fontPath)
     const ext = 'otf'
     const newBuffer = await minify({
       buffer,
@@ -276,11 +274,245 @@ describe('otf', () => {
   })
 })
 
+describe('eot', () => {
+  const fontPath = join(__dirname, '../fonts/SmileySans-Oblique.eot')
+
+  const buffer = fs.readFileSync(fontPath)
+  it('eot', async () => {
+    const ext = 'eot'
+    const newBuffer = await minify({
+      buffer,
+      text: TEST_STRING,
+      readOptions: {
+        type: ext,
+      },
+      writeOptions: {
+        type: 'eot',
+      },
+    })
+
+    const data = {
+      hash: getHash(newBuffer),
+      originSize: displaySize(buffer.length),
+      newSize: displaySize(newBuffer.length),
+    }
+
+    expect(data).toMatchInlineSnapshot(`
+      {
+        "hash": "49f8440f4e6cc17247874f8830c5cae2faf714e56b7da82ed1788b3525ca117b",
+        "newSize": "6.74 kB",
+        "originSize": "2.07 MB",
+      }
+    `)
+  })
+
+  it('eot 2 ttf', async () => {
+    const ext = 'eot'
+    const newBuffer = await minify({
+      buffer,
+      text: TEST_STRING,
+      readOptions: {
+        type: ext,
+      },
+      writeOptions: {
+        type: 'ttf',
+      },
+    })
+
+    const data = {
+      hash: getHash(newBuffer),
+      originSize: displaySize(buffer.length),
+      newSize: displaySize(newBuffer.length),
+    }
+
+    expect(data).toMatchInlineSnapshot(`
+      {
+        "hash": "e21b047b299ae8bba8d97bc5d371a6d84ca1ae22117f0fd4bcbd93772d33b547",
+        "newSize": "6.54 kB",
+        "originSize": "2.07 MB",
+      }
+    `)
+  })
+
+  it('eot 2 woff', async () => {
+    const ext = 'eot'
+    const newBuffer = await minify({
+      buffer,
+      text: TEST_STRING,
+      readOptions: {
+        type: ext,
+      },
+      writeOptions: {
+        type: 'woff',
+      },
+    })
+
+    const data = {
+      hash: getHash(newBuffer),
+      originSize: displaySize(buffer.length),
+      newSize: displaySize(newBuffer.length),
+    }
+
+    expect(data).toMatchInlineSnapshot(`
+      {
+        "hash": "08fcdc492bf789bdcbffc3f6c3183b41cd8cb287ba3257ad63e6476627c0ab6d",
+        "newSize": "6.61 kB",
+        "originSize": "2.07 MB",
+      }
+    `)
+  })
+
+  it('eot 2 woff2', async () => {
+    const ext = 'eot'
+    const newBuffer = await minify({
+      buffer,
+      text: TEST_STRING,
+      readOptions: {
+        type: ext,
+      },
+      writeOptions: {
+        type: 'woff2',
+      },
+    })
+
+    const data = {
+      hash: getHash(newBuffer),
+      originSize: displaySize(buffer.length),
+      newSize: displaySize(newBuffer.length),
+    }
+
+    expect(data).toMatchInlineSnapshot(`
+      {
+        "hash": "474ccea891777f6fbc64eaf043eb664a71eacf2da15874d93d2c0bd8c38182b0",
+        "newSize": "3.43 kB",
+        "originSize": "2.07 MB",
+      }
+    `)
+  })
+})
+
+describe('woff', () => {
+  const fontPath = join(__dirname, '../fonts/SmileySans-Oblique.woff')
+  const buffer = fs.readFileSync(fontPath)
+
+  it('woff', async () => {
+    const ext = 'woff'
+    const newBuffer = await minify({
+      buffer,
+      text: TEST_STRING,
+      readOptions: {
+        type: ext,
+      },
+      writeOptions: {
+        type: ext,
+      },
+    })
+
+    const data = {
+      hash: getHash(newBuffer),
+      originSize: displaySize(buffer.length),
+      newSize: displaySize(newBuffer.length),
+    }
+
+    expect(data).toMatchInlineSnapshot(`
+      {
+        "hash": "08fcdc492bf789bdcbffc3f6c3183b41cd8cb287ba3257ad63e6476627c0ab6d",
+        "newSize": "6.61 kB",
+        "originSize": "2.07 MB",
+      }
+    `)
+  })
+
+  it('woff 2 ttf', async () => {
+    const ext = 'woff'
+    const newBuffer = await minify({
+      buffer,
+      text: TEST_STRING,
+      readOptions: {
+        type: ext,
+      },
+      writeOptions: {
+        type: 'ttf',
+      },
+    })
+
+    const data = {
+      hash: getHash(newBuffer),
+      originSize: displaySize(buffer.length),
+      newSize: displaySize(newBuffer.length),
+    }
+
+    expect(data).toMatchInlineSnapshot(`
+      {
+        "hash": "e21b047b299ae8bba8d97bc5d371a6d84ca1ae22117f0fd4bcbd93772d33b547",
+        "newSize": "6.54 kB",
+        "originSize": "2.07 MB",
+      }
+    `)
+  })
+
+  it('woff 2 woff', async () => {
+    const ext = 'woff'
+    const newBuffer = await minify({
+      buffer,
+      text: TEST_STRING,
+      readOptions: {
+        type: ext,
+      },
+      writeOptions: {
+        type: 'woff',
+      },
+    })
+
+    const data = {
+      hash: getHash(newBuffer),
+      originSize: displaySize(buffer.length),
+      newSize: displaySize(newBuffer.length),
+    }
+
+    expect(data).toMatchInlineSnapshot(`
+      {
+        "hash": "08fcdc492bf789bdcbffc3f6c3183b41cd8cb287ba3257ad63e6476627c0ab6d",
+        "newSize": "6.61 kB",
+        "originSize": "2.07 MB",
+      }
+    `)
+  })
+
+  it('woff 2 eot', async () => {
+    const ext = 'woff'
+    const newBuffer = await minify({
+      buffer,
+      text: TEST_STRING,
+      readOptions: {
+        type: ext,
+      },
+      writeOptions: {
+        type: 'eot',
+      },
+    })
+
+    const data = {
+      hash: getHash(newBuffer),
+      originSize: displaySize(buffer.length),
+      newSize: displaySize(newBuffer.length),
+    }
+
+    expect(data).toMatchInlineSnapshot(`
+      {
+        "hash": "49f8440f4e6cc17247874f8830c5cae2faf714e56b7da82ed1788b3525ca117b",
+        "newSize": "6.74 kB",
+        "originSize": "2.07 MB",
+      }
+    `)
+  })
+})
+
 describe('woff2', () => {
   const fontPath = join(__dirname, '../fonts/SmileySans-Oblique.ttf.woff2')
+  const buffer = fs.readFileSync(fontPath)
 
   it('woff2', async () => {
-    const buffer = fs.readFileSync(fontPath)
     const ext = 'woff2'
     const newBuffer = await minify({
       buffer,
@@ -309,7 +541,6 @@ describe('woff2', () => {
   })
 
   it('woff2 2 ttf', async () => {
-    const buffer = fs.readFileSync(fontPath)
     const ext = 'woff2'
     const newBuffer = await minify({
       buffer,
@@ -338,7 +569,6 @@ describe('woff2', () => {
   })
 
   it('woff2 2 woff', async () => {
-    const buffer = fs.readFileSync(fontPath)
     const ext = 'woff2'
     const newBuffer = await minify({
       buffer,
@@ -367,7 +597,6 @@ describe('woff2', () => {
   })
 
   it('woff2 2 eot', async () => {
-    const buffer = fs.readFileSync(fontPath)
     const ext = 'woff2'
     const newBuffer = await minify({
       buffer,
