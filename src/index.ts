@@ -19,11 +19,10 @@ export interface IOptions {
   writeOptions: FontWriteOptionsWithoutSVG // only support font type: ttf | woff | woff2 | eot
 }
 
-export default async function minify(options: IOptions) {
-  if ([options.readOptions.type, options.writeOptions.type].includes('woff2')) {
-    await woff2.init()
-  }
+// init woff2 webassembly
+woff2.init()
 
+export default async function minify(options: IOptions) {
   const unique = uniqueString(options.text)
   const unicodes = stringToUnicodeNumbers(unique)
 
