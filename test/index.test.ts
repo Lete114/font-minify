@@ -66,13 +66,7 @@ describe('icon font', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "861a016c783b596ce167143deb3a922a7ef3d0a34d85ae90ebe959c12ced78af",
-        "newSize": "4.45 kB",
-        "originSize": "2.10 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('css', async () => {
@@ -94,13 +88,7 @@ describe('icon font', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "d148b1961a21a41c157dced63d86b29a2eee08b9044a0feb02e7e7df6fcb3d5a",
-        "newSize": "4.93 kB",
-        "originSize": "2.10 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('html + css', async () => {
@@ -122,13 +110,7 @@ describe('icon font', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "d148b1961a21a41c157dced63d86b29a2eee08b9044a0feb02e7e7df6fcb3d5a",
-        "newSize": "4.93 kB",
-        "originSize": "2.10 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 })
 
@@ -155,13 +137,7 @@ describe('ttf', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "e21b047b299ae8bba8d97bc5d371a6d84ca1ae22117f0fd4bcbd93772d33b547",
-        "newSize": "6.54 kB",
-        "originSize": "2.10 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('ttf 2 woff', async () => {
@@ -183,13 +159,7 @@ describe('ttf', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "08fcdc492bf789bdcbffc3f6c3183b41cd8cb287ba3257ad63e6476627c0ab6d",
-        "newSize": "6.61 kB",
-        "originSize": "2.10 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('ttf 2 woff2', async () => {
@@ -211,13 +181,7 @@ describe('ttf', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "474ccea891777f6fbc64eaf043eb664a71eacf2da15874d93d2c0bd8c38182b0",
-        "newSize": "3.43 kB",
-        "originSize": "2.10 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('ttf 2 eot', async () => {
@@ -239,13 +203,7 @@ describe('ttf', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "49f8440f4e6cc17247874f8830c5cae2faf714e56b7da82ed1788b3525ca117b",
-        "newSize": "6.74 kB",
-        "originSize": "2.10 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 })
 
@@ -272,13 +230,7 @@ describe('otf', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "516149469cdf1d81807d99246bb9b1ac3086fe2cae43065dbf98dbf42c22bb87",
-        "newSize": "6.84 kB",
-        "originSize": "1.63 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('otf 2 woff', async () => {
@@ -300,13 +252,7 @@ describe('otf', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "492d597f473caa99efcfe2ce569e5925d71ae19a2da40c0fab155fac0636be25",
-        "newSize": "6.91 kB",
-        "originSize": "1.63 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('otf 2 woff2', async () => {
@@ -328,13 +274,7 @@ describe('otf', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "dc62333ab764d31696da2b8135abfda6fda01ea79bc27fbb5380b41d001092cb",
-        "newSize": "3.56 kB",
-        "originSize": "1.63 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('otf 2 eot', async () => {
@@ -356,13 +296,7 @@ describe('otf', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "df319b8eb2612d2cf4aa18a8fef75adf0a213427911c6480540a5467fba62285",
-        "newSize": "7.04 kB",
-        "originSize": "1.63 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 })
 
@@ -389,13 +323,7 @@ describe('eot', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "49f8440f4e6cc17247874f8830c5cae2faf714e56b7da82ed1788b3525ca117b",
-        "newSize": "6.74 kB",
-        "originSize": "2.07 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('eot 2 ttf', async () => {
@@ -417,13 +345,7 @@ describe('eot', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "e21b047b299ae8bba8d97bc5d371a6d84ca1ae22117f0fd4bcbd93772d33b547",
-        "newSize": "6.54 kB",
-        "originSize": "2.07 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('eot 2 woff', async () => {
@@ -445,13 +367,7 @@ describe('eot', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "08fcdc492bf789bdcbffc3f6c3183b41cd8cb287ba3257ad63e6476627c0ab6d",
-        "newSize": "6.61 kB",
-        "originSize": "2.07 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('eot 2 woff2', async () => {
@@ -473,13 +389,7 @@ describe('eot', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "474ccea891777f6fbc64eaf043eb664a71eacf2da15874d93d2c0bd8c38182b0",
-        "newSize": "3.43 kB",
-        "originSize": "2.07 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 })
 
@@ -506,13 +416,7 @@ describe('woff', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "08fcdc492bf789bdcbffc3f6c3183b41cd8cb287ba3257ad63e6476627c0ab6d",
-        "newSize": "6.61 kB",
-        "originSize": "2.07 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('woff 2 ttf', async () => {
@@ -534,13 +438,7 @@ describe('woff', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "e21b047b299ae8bba8d97bc5d371a6d84ca1ae22117f0fd4bcbd93772d33b547",
-        "newSize": "6.54 kB",
-        "originSize": "2.07 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('woff 2 woff', async () => {
@@ -562,13 +460,7 @@ describe('woff', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "08fcdc492bf789bdcbffc3f6c3183b41cd8cb287ba3257ad63e6476627c0ab6d",
-        "newSize": "6.61 kB",
-        "originSize": "2.07 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('woff 2 eot', async () => {
@@ -590,13 +482,7 @@ describe('woff', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "49f8440f4e6cc17247874f8830c5cae2faf714e56b7da82ed1788b3525ca117b",
-        "newSize": "6.74 kB",
-        "originSize": "2.07 MB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 })
 
@@ -623,13 +509,7 @@ describe('woff2', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "474ccea891777f6fbc64eaf043eb664a71eacf2da15874d93d2c0bd8c38182b0",
-        "newSize": "3.43 kB",
-        "originSize": "942.54 kB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('woff2 2 ttf', async () => {
@@ -651,13 +531,7 @@ describe('woff2', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "5a372044143aca8b9188a49f9424e540d875c0af26b9bd56fb2c63c3cee7fcdd",
-        "newSize": "6.54 kB",
-        "originSize": "942.54 kB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('woff2 2 woff', async () => {
@@ -679,13 +553,7 @@ describe('woff2', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "8d661f2e87aba33856e0b65ddf69fa13f5f990e3f038568b5e8895589ed9061b",
-        "newSize": "6.61 kB",
-        "originSize": "942.54 kB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 
   it('woff2 2 eot', async () => {
@@ -707,12 +575,6 @@ describe('woff2', () => {
       newSize: displaySize(newBuffer.length),
     }
 
-    expect(data).toMatchInlineSnapshot(`
-      {
-        "hash": "1a30cfef36c6035cf21beb9d0c0913b7a4c52b38d9bbb2e51b6e71aa631e6433",
-        "newSize": "6.74 kB",
-        "originSize": "942.54 kB",
-      }
-    `)
+    expect(data).toMatchSnapshot()
   })
 })
