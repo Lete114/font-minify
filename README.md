@@ -53,7 +53,7 @@ const buffer = fs.readFileSync(fontPath)
 
 ## License
 
-[MIT](./LICENSE) License © 2023-PRESENT [Lete114](https://github.com/lete114)
+[MIT](./LICENSE) License © 2024-PRESENT [Lete114](https://github.com/lete114)
 
 <!-- Badges -->
 
