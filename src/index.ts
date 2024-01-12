@@ -1,6 +1,6 @@
 import { Font, woff2 } from 'fonteditor-core'
 import type { FontEditor } from 'fonteditor-core'
-import { stringToUnicodeNumbers, uniqueString } from './utils'
+import { handlerIconFont, stringToUnicodeNumbers, uniqueString } from './utils'
 
 type FontTypeWithoutSVG = Exclude<FontEditor.FontType, 'svg'>
 
@@ -26,12 +26,18 @@ export default async function minify(options: IOptions) {
 
   const unique = uniqueString(options.text)
   const unicodes = stringToUnicodeNumbers(unique)
+
   if (Array.isArray(options.readOptions.subset)) {
     options.readOptions.subset.push(...unicodes)
   }
   else {
     options.readOptions.subset = unicodes
   }
+
+  // support icon font
+  const points = handlerIconFont(options.text)
+  options.readOptions.subset.push(...points)
+
   const font = Font.create(options.buffer, options.readOptions)
 
   const buffer = font.write({ ...options.writeOptions, toBuffer: true })

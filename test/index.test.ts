@@ -39,6 +39,98 @@ export function displaySize(byte: number) {
 
   return `${numberFormatter.format(byte / ONE_THOUSAND)} kB`
 }
+describe('icon font', () => {
+  const fontPath = join(__dirname, '../fonts/SmileySans-Oblique.ttf')
+  const buffer = fs.readFileSync(fontPath)
+
+  // 0123456789
+  const unicodesHTML = '\\30\\31\\32\\33\\34\\35\\36\\37\\38\\39'
+  const unicodesCSS = '&#x\\30;&#x\\31;&#x\\32;&#x\\33;&#x\\34;&#x\\35;&#x\\36;&#x\\37;&#x\\38;&#x\\39;'
+
+  it('html', async () => {
+    const ext = 'ttf'
+    const newBuffer = await minify({
+      buffer,
+      text: unicodesHTML,
+      readOptions: {
+        type: ext,
+      },
+      writeOptions: {
+        type: ext,
+      },
+    })
+
+    const data = {
+      hash: getHash(newBuffer),
+      originSize: displaySize(buffer.length),
+      newSize: displaySize(newBuffer.length),
+    }
+
+    expect(data).toMatchInlineSnapshot(`
+      {
+        "hash": "861a016c783b596ce167143deb3a922a7ef3d0a34d85ae90ebe959c12ced78af",
+        "newSize": "4.45 kB",
+        "originSize": "2.10 MB",
+      }
+    `)
+  })
+
+  it('css', async () => {
+    const ext = 'ttf'
+    const newBuffer = await minify({
+      buffer,
+      text: unicodesCSS,
+      readOptions: {
+        type: ext,
+      },
+      writeOptions: {
+        type: ext,
+      },
+    })
+
+    const data = {
+      hash: getHash(newBuffer),
+      originSize: displaySize(buffer.length),
+      newSize: displaySize(newBuffer.length),
+    }
+
+    expect(data).toMatchInlineSnapshot(`
+      {
+        "hash": "d148b1961a21a41c157dced63d86b29a2eee08b9044a0feb02e7e7df6fcb3d5a",
+        "newSize": "4.93 kB",
+        "originSize": "2.10 MB",
+      }
+    `)
+  })
+
+  it('html + css', async () => {
+    const ext = 'ttf'
+    const newBuffer = await minify({
+      buffer,
+      text: unicodesHTML + unicodesCSS,
+      readOptions: {
+        type: ext,
+      },
+      writeOptions: {
+        type: ext,
+      },
+    })
+
+    const data = {
+      hash: getHash(newBuffer),
+      originSize: displaySize(buffer.length),
+      newSize: displaySize(newBuffer.length),
+    }
+
+    expect(data).toMatchInlineSnapshot(`
+      {
+        "hash": "d148b1961a21a41c157dced63d86b29a2eee08b9044a0feb02e7e7df6fcb3d5a",
+        "newSize": "4.93 kB",
+        "originSize": "2.10 MB",
+      }
+    `)
+  })
+})
 
 describe('ttf', () => {
   const fontPath = join(__dirname, '../fonts/SmileySans-Oblique.ttf')
