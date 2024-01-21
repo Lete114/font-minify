@@ -1,7 +1,7 @@
 {
   "name": "font-minify",
   "type": "module",
-  "version": "0.0.0-alpha.3",
+  "version": "0.0.0-alpha.4",
   "packageManager": "pnpm@8.12.1",
   "description": "Keep only used glyphs and remove unused glyphs. Generate font subsets to achieve the purpose of compression",
   "author": "Lete114 <me@imlete.cn>",
@@ -32,7 +32,7 @@
       "default": "./dist/index.umd.js"
     },
     "./umd": "./dist/index.umd.js",
-    "./woff2Wasm": "./node_modules/fonteditor-core/woff2/woff2.wasm"
+    "./woff2Wasm": "./dist/woff2.wasm"
   },
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
