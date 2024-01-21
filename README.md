@@ -23,7 +23,7 @@ import fs from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join, parse } from 'node:path'
 import minify from 'font-minify'
-// or use commonJS
+// or use CommonJS
 // const minify = require('font-minify')
 
 const __filename = fileURLToPath(import.meta.url)
@@ -49,6 +49,48 @@ const buffer = fs.readFileSync(fontPath)
   const fontPath = join(__dirname, 'fonts/fontfile.new.ttf')
   fs.writeFileSync(fontPath, newBuffer)
 })()
+```
+
+If you're going to run it in a **browser** and you're going to work with `woff2` fonts, then you should also need `dist/woff2.wasm`, and when you do, you must also pass in the path to the `woff2.wasm` file. Otherwise you can't handle the `woff2` font.
+
+```js
+// example
+import minify from 'font-minify'
+
+const newBuffer = await minify({
+  buffer,
+  text: TEST_STRING,
+  wasm: {
+    // The path where you store `woff2.wasm`.
+    woff2: 'woff2.wasm' // If you're using a packaging tool to build your front-end project, then you should put `woff2.wasm` in the `public` directory
+  },
+  readOptions: {
+    type: 'ttf',
+  },
+  writeOptions: {
+    type: 'woff2',
+  },
+})
+```
+If you're using vite to build your front-end project ([Vite Static Asset Handling](https://vitejs.dev/guide/assets.html))
+```js
+// example
+import minify from 'font-minify'
+import woff2Wasm from 'font-minify/woff2Wasm?url'
+
+const newBuffer = await minify({
+  buffer,
+  text: TEST_STRING,
+  wasm: {
+    woff2: woff2Wasm
+  },
+  readOptions: {
+    type: 'ttf',
+  },
+  writeOptions: {
+    type: 'woff2',
+  },
+})
 ```
 
 ## License
