@@ -1,7 +1,7 @@
 {
   "name": "font-minify",
   "type": "module",
-  "version": "0.0.0-alpha.2",
+  "version": "0.0.0-alpha.3",
   "packageManager": "pnpm@8.12.1",
   "description": "Keep only used glyphs and remove unused glyphs. Generate font subsets to achieve the purpose of compression",
   "author": "Lete114 <me@imlete.cn>",
