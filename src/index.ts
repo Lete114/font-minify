@@ -15,14 +15,20 @@ interface FontWriteOptionsWithoutSVG extends Omit<FontEditor.FontWriteOptions, '
 export interface IOptions {
   buffer: FontEditor.FontInput
   text: string
+  wasm?: {
+    woff2?: string
+  }
   readOptions: FontReadOptionsWithoutSVG // only support font type: ttf | woff | woff2 | eot | otf
   writeOptions: FontWriteOptionsWithoutSVG // only support font type: ttf | woff | woff2 | eot
 }
 
-// init woff2 webassembly
-woff2.init()
-
 export default async function minify(options: IOptions) {
+  // init woff2 webassembly
+  const types = [options.readOptions.type, options.writeOptions.type]
+  if (types.includes('woff2')) {
+    await woff2.init(options.wasm?.woff2 || 'woff2.wasm')
+  }
+
   const unique = uniqueString(options.text)
   const unicodes = stringToUnicodeNumbers(unique)
 
