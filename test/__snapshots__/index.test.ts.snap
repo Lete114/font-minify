@@ -2,32 +2,32 @@
 
 exports[`eot > eot 1`] = `
 {
-  "hash": "af925eb3b0758c99cad0eafb37f84e2cd7ab1d1d410d0c627ded3384d7b57927",
-  "newSize": "6.80 kB",
+  "hash": "2750719ba61570365a121a2e5af958164db3cc07da51a92d89621974cd5126d6",
+  "newSize": "6.83 kB",
   "originSize": "2.07 MB",
 }
 `;
 
 exports[`eot > eot 2 ttf 1`] = `
 {
-  "hash": "b21c4a846f28b4a6f1d7c10fcb268978c6246fdcb67946534773a2a1a8f1e77c",
-  "newSize": "6.60 kB",
+  "hash": "3411e53f99d10f61099014e3411c3b07250c14911ce3228a972c7b86f528320e",
+  "newSize": "6.63 kB",
   "originSize": "2.07 MB",
 }
 `;
 
 exports[`eot > eot 2 woff 1`] = `
 {
-  "hash": "920988f0ed64743d4d3755d57f242548545e8eed6b731c92ed0f7c87f8c6b09d",
-  "newSize": "6.67 kB",
+  "hash": "e575f399559aa7515331bcac1656b7129af19c0ffd0f6f3d40edf9ab542dec88",
+  "newSize": "6.70 kB",
   "originSize": "2.07 MB",
 }
 `;
 
 exports[`eot > eot 2 woff2 1`] = `
 {
-  "hash": "3357da4ca28e6ac2d4d173c84b2d161c5777bbbc5c7caeaba026166bd7a2843d",
-  "newSize": "3.48 kB",
+  "hash": "d674312638c499b7137a116536c1019cb8a263e16fe1f2561cf68316535cfde3",
+  "newSize": "3.50 kB",
   "originSize": "2.07 MB",
 }
 `;
@@ -58,128 +58,128 @@ exports[`icon font > html 1`] = `
 
 exports[`otf > otf 2 eot 1`] = `
 {
-  "hash": "98dd4339d564aff80fff09b0af683fff4c4a22d97f21d058ba5c88f67e9c0199",
-  "newSize": "7.09 kB",
+  "hash": "6acdca7e4cac5c098dd352def7f7dac6151dd5b56563e0510c0359df2c7a1fc1",
+  "newSize": "7.16 kB",
   "originSize": "1.63 MB",
 }
 `;
 
 exports[`otf > otf 2 ttf 1`] = `
 {
-  "hash": "97f6b30721edba7c1ac6b9c843539b89ef3b2056569ad67f8bdb15c7beecfe06",
-  "newSize": "6.89 kB",
+  "hash": "4f34239d3e8848b4c15dbb8de3ff0a5a1cf59e5984bf6e9a31d50197264fdf3d",
+  "newSize": "6.96 kB",
   "originSize": "1.63 MB",
 }
 `;
 
 exports[`otf > otf 2 woff 1`] = `
 {
-  "hash": "4d31675be71816e0674405f97d35fadd4f8db6efda8cf064e99ff7a916cf542c",
-  "newSize": "6.96 kB",
+  "hash": "cb390114bae304b8358c46e650c2cc01887c5c7cc26cec1995114ed2d1a548e2",
+  "newSize": "7.03 kB",
   "originSize": "1.63 MB",
 }
 `;
 
 exports[`otf > otf 2 woff2 1`] = `
 {
-  "hash": "28ae63ab36ae05d8fede28f297d8a517cf3bc5e7ce46544ab2536838cc75113d",
-  "newSize": "3.56 kB",
+  "hash": "0c571af6c677db43bfddea91616e26126d6ca22af92a2b9ef51a2c1868cb8c91",
+  "newSize": "3.63 kB",
   "originSize": "1.63 MB",
 }
 `;
 
 exports[`ttf > ttf 1`] = `
 {
-  "hash": "b21c4a846f28b4a6f1d7c10fcb268978c6246fdcb67946534773a2a1a8f1e77c",
-  "newSize": "6.60 kB",
+  "hash": "3411e53f99d10f61099014e3411c3b07250c14911ce3228a972c7b86f528320e",
+  "newSize": "6.63 kB",
   "originSize": "2.10 MB",
 }
 `;
 
 exports[`ttf > ttf 2 eot 1`] = `
 {
-  "hash": "af925eb3b0758c99cad0eafb37f84e2cd7ab1d1d410d0c627ded3384d7b57927",
-  "newSize": "6.80 kB",
+  "hash": "2750719ba61570365a121a2e5af958164db3cc07da51a92d89621974cd5126d6",
+  "newSize": "6.83 kB",
   "originSize": "2.10 MB",
 }
 `;
 
 exports[`ttf > ttf 2 woff 1`] = `
 {
-  "hash": "920988f0ed64743d4d3755d57f242548545e8eed6b731c92ed0f7c87f8c6b09d",
-  "newSize": "6.67 kB",
+  "hash": "e575f399559aa7515331bcac1656b7129af19c0ffd0f6f3d40edf9ab542dec88",
+  "newSize": "6.70 kB",
   "originSize": "2.10 MB",
 }
 `;
 
 exports[`ttf > ttf 2 woff2 1`] = `
 {
-  "hash": "3357da4ca28e6ac2d4d173c84b2d161c5777bbbc5c7caeaba026166bd7a2843d",
-  "newSize": "3.48 kB",
+  "hash": "d674312638c499b7137a116536c1019cb8a263e16fe1f2561cf68316535cfde3",
+  "newSize": "3.50 kB",
   "originSize": "2.10 MB",
 }
 `;
 
 exports[`woff > woff 1`] = `
 {
-  "hash": "920988f0ed64743d4d3755d57f242548545e8eed6b731c92ed0f7c87f8c6b09d",
-  "newSize": "6.67 kB",
+  "hash": "e575f399559aa7515331bcac1656b7129af19c0ffd0f6f3d40edf9ab542dec88",
+  "newSize": "6.70 kB",
   "originSize": "2.07 MB",
 }
 `;
 
 exports[`woff > woff 2 eot 1`] = `
 {
-  "hash": "af925eb3b0758c99cad0eafb37f84e2cd7ab1d1d410d0c627ded3384d7b57927",
-  "newSize": "6.80 kB",
+  "hash": "2750719ba61570365a121a2e5af958164db3cc07da51a92d89621974cd5126d6",
+  "newSize": "6.83 kB",
   "originSize": "2.07 MB",
 }
 `;
 
 exports[`woff > woff 2 ttf 1`] = `
 {
-  "hash": "b21c4a846f28b4a6f1d7c10fcb268978c6246fdcb67946534773a2a1a8f1e77c",
-  "newSize": "6.60 kB",
+  "hash": "3411e53f99d10f61099014e3411c3b07250c14911ce3228a972c7b86f528320e",
+  "newSize": "6.63 kB",
   "originSize": "2.07 MB",
 }
 `;
 
 exports[`woff > woff 2 woff 1`] = `
 {
-  "hash": "920988f0ed64743d4d3755d57f242548545e8eed6b731c92ed0f7c87f8c6b09d",
-  "newSize": "6.67 kB",
+  "hash": "e575f399559aa7515331bcac1656b7129af19c0ffd0f6f3d40edf9ab542dec88",
+  "newSize": "6.70 kB",
   "originSize": "2.07 MB",
 }
 `;
 
 exports[`woff2 > woff2 1`] = `
 {
-  "hash": "3357da4ca28e6ac2d4d173c84b2d161c5777bbbc5c7caeaba026166bd7a2843d",
-  "newSize": "3.48 kB",
+  "hash": "d674312638c499b7137a116536c1019cb8a263e16fe1f2561cf68316535cfde3",
+  "newSize": "3.50 kB",
   "originSize": "942.54 kB",
 }
 `;
 
 exports[`woff2 > woff2 2 eot 1`] = `
 {
-  "hash": "542c2133ff82a82c7e58f468f6d7a925c4a5c5f83e46103f828b2827a79545ea",
-  "newSize": "6.80 kB",
+  "hash": "2486ff4cbc1b1bad41b2dfa7088fe69125c52a7e922337fe93caf2130ae7215c",
+  "newSize": "6.83 kB",
   "originSize": "942.54 kB",
 }
 `;
 
 exports[`woff2 > woff2 2 ttf 1`] = `
 {
-  "hash": "e13957742c8bc6abc348ac23157538ef92410a444cae58ae5f4eac475f97ae1c",
-  "newSize": "6.60 kB",
+  "hash": "710937d80c717c24fd5636deae82feb1f71d0c134a2e7d15a968785259f7711c",
+  "newSize": "6.63 kB",
   "originSize": "942.54 kB",
 }
 `;
 
 exports[`woff2 > woff2 2 woff 1`] = `
 {
-  "hash": "c72e9571624ebae22cf67a5d4728c4877b44d3a4432ac17670e067b3d2190fa8",
-  "newSize": "6.67 kB",
+  "hash": "d30834d9f45cbfb6c7fc9f2e578636d47efafb3dbfedbc188c01bfdcb393f96d",
+  "newSize": "6.70 kB",
   "originSize": "942.54 kB",
 }
 `;
