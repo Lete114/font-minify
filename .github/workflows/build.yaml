@@ -7,18 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: latest
-
     steps:
       - uses: actions/checkout@main
-
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@main
+      - uses: actions/setup-node@main
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: latest
 
       - name: Build
         run: |
