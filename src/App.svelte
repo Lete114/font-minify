@@ -164,21 +164,20 @@
   }
 
   function onClikcDownload() {
-    console.log(downloadOptions)
     const blob = new Blob([downloadOptions.arrayBuffer], {
       type: 'application/octet-stream'
     })
-    // const url = URL.createObjectURL(blob)
+    const url = URL.createObjectURL(blob)
 
-    // const downloadLink = document.createElement('a')
-    // downloadLink.href = url
-    // downloadLink.download = downloadOptions.fileName
-    // downloadLink.style.display = 'none'
-    // document.body.appendChild(downloadLink)
-    // downloadLink.click()
-    // document.body.removeChild(downloadLink)
+    const downloadLink = document.createElement('a')
+    downloadLink.href = url
+    downloadLink.download = downloadOptions.fileName
+    downloadLink.style.display = 'none'
+    document.body.appendChild(downloadLink)
+    downloadLink.click()
+    document.body.removeChild(downloadLink)
 
-    // URL.revokeObjectURL(url)
+    URL.revokeObjectURL(url)
 
     isMinify = false
   }
