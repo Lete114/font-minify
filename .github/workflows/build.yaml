@@ -25,3 +25,4 @@ jobs:
         npm install pnpm -g
         pnpm i
         pnpm build
+        cp -r dist/. .
